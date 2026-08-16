@@ -1,38 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>My First Website</title>
-<style>
-  body { font-family: Arial, sans-serif; background: #f4f6f8; margin: 0; }
-  .container { max-width: 800px; margin: 40px auto; padding: 20px; }
-  .card { background: white; padding: 20px; border-radius: 12px;
-          box-shadow: 0 4px 12px rgba(0,0,0,.08); }
-  input { padding: 10px; width: 70%; border: 1px solid #ccc; border-radius: 8px; }
-  button { padding: 10px 16px; border: none; border-radius: 8px;
-           background: #2563eb; color: white; cursor: pointer; }
-  #result { margin-top: 15px; }
-</style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Website</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-<div class="container">
-  <h1>Hello, this is my website</h1>
-  <div class="card">
-    <h2>Search</h2>
-    <form id="search-form">
-      <input id="search-input" type="search" placeholder="Type something...">
-      <button type="submit">Search</button>
-    </form>
-    <div id="result"></div>
-  </div>
-</div>
-<script>
-document.getElementById("search-form").addEventListener("submit", function (e) {
-  e.preventDefault();
-  var q = document.getElementById("search-input").value;
-  document.getElementById("result").textContent = "You searched for: " + q;
-});
-</script>
+
+  <main class="container">
+    <h1>Welcome to My Website</h1>
+
+    <p>This is my first website hosted on GitHub Pages.</p>
+
+    <section class="search-box">
+      <h2>Search</h2>
+
+      <form id="search-form">
+        <input
+          id="search-input"
+          type="search"
+          placeholder="Type something to search..."
+          required
+        />
+        <button type="submit">Search</button>
+      </form>
+
+      <div id="result"></div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
 </body>
 </html>
